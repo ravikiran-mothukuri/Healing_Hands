@@ -1,0 +1,189 @@
+/* styles/dashboard.css */
+.dashboard-container {
+  min-height: 100vh;
+  margin-top: 70px;
+  background: linear-gradient(135deg, #f6f9fc 0%, #e9ecef 100%);
+  padding: 100px 20px 40px; /* Adjusted padding to account for navbar */
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 1.2rem;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.dashboard-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dashboard-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #4361ee;
+  margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dashboard-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.card-btn {
+  display: inline-block;
+  background: #4361ee;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.card-btn:hover {
+  background: #3a0ca3;
+  transform: translateY(-2px);
+}
+
+/* Welcome image */
+.welcome-image {
+  max-width: 350px;
+  margin: 0 auto 40px;
+  display: block;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stats summary */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4361ee;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-header p {
+    font-size: 1rem;
+  }
+  
+  .dashboard-card {
+    width: 100%;
+  }
+  
+  .stat-box {
+    width: 100%;
+  }
+}

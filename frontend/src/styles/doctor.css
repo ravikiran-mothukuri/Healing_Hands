@@ -1,0 +1,224 @@
+/* styles/doctor.css */
+.doctor-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+.doctor-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.doctor-dashboard .container {
+  padding-top: 100px; /* Reduced from 100px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-header h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.doctor-header p {
+  color: #666;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.doctor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+}
+
+.doctor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.doctor-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.doctor-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.card-badge {
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  background: #4361ee;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #4361ee;
+  margin-bottom: 20px;
+}
+
+.doctor-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.doctor-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.doctor-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.stat-item {
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 170px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4361ee;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.quick-actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.quick-actions h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.action-btn:hover {
+  background: #4361ee;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(67, 97, 238, 0.2);
+}
+
+.action-btn i {
+  font-size: 1.2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .doctor-header p {
+    font-size: 1rem;
+  }
+  
+  .doctor-card {
+    width: 100%;
+  }
+  
+  .doctor-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .stat-item {
+    width: 45%;
+  }
+}

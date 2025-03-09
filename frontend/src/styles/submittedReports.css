@@ -1,0 +1,153 @@
+.submitted-reports-container {
+  margin-top: 120px;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #e8f5e9, #f5fbf6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  background-size: 40px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.submitted-reports-container h1 {
+  font-size: 2.5rem;
+  color: #2e4057;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.submitted-reports-container h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #4e4376;
+  border-radius: 2px;
+}
+
+.report-box {
+  background: #fff;
+  padding: 25px;
+  margin: 25px auto;
+  width: 60%;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border-left: 5px solid #4e4376;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.report-header h3 {
+  font-size: 1.4rem;
+  color: #2e4057;
+  margin: 0;
+}
+
+.patient-basic-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.patient-basic-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.severity-badge {
+  background: #e8f5e9;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.symptoms-section {
+  margin: 15px 0;
+}
+
+.symptoms-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.symptoms-list li {
+  background: #f0f4f8;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #2e4057;
+}
+
+.additional-info, .patient-comments {
+  margin: 15px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #a5d6a7;
+}
+
+.doctor-response {
+  margin-top: 25px;
+  padding: 20px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  border-left: 5px solid #2196f3;
+}
+
+.response-content {
+  font-style: italic;
+  color: #01579b;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .report-box {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .submitted-reports-container h1 {
+    font-size: 2rem;
+  }
+  
+  .patient-basic-info {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
